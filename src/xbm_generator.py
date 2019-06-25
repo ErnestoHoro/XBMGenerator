@@ -14,7 +14,7 @@ class XBMGenerator:
         self.output = []
         self.output_filepath = '../data/test.xbm'
 
-    def read_array(self):
+    def read_matrix(self):
         with open(self.input_filepath, 'r') as f:
             self.input = f.read().splitlines()
 
@@ -53,8 +53,8 @@ class XBMGenerator:
 
 
 if __name__ == '__main__':
-    xbm_generator = XBMGenerator(invert=True)
-    xbm_generator.read_array()
+    xbm_generator = XBMGenerator(invert=False)
+    xbm_generator.read_matrix()
     xbm_generator.create_xbm()
     xbm_generator.write_xbm()
     xbm_generator.debug_print()
