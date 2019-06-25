@@ -37,6 +37,7 @@ class XBMGenerator:
                     byte_array = ''.join(reversed(byte_array))
                     hex_value = hex(int(byte_array, 2))
                     self.xbm_hex_array.append(hex_value)
+                    byte_array = []
 
         self.output.append(', '.join(self.xbm_hex_array))
         self.output.append('};')
